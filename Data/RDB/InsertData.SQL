@@ -69,3 +69,4 @@ insert into RoomAvailability (RoomID, ReservationID, AvailableDate, AvailableSta
 (5, null, '2026-09-10', '08:00', '09:00', 'Available'),
 (5, null, '2026-09-11', '16:00', '17:00', 'Available'),
 (5, null, '2026-09-13', '10:00', '11:00', 'Available');
+
