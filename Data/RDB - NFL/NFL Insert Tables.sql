@@ -60,7 +60,7 @@ VALUES
 
 GO
 
-insert into AppUser (Firstname, Lastname, Email, PhoneNumber, PasswordHash, UserRole)
+insert into NFLAppUser (Firstname, Lastname, Email, PhoneNumber, PasswordHash, UserRole)
 VALUES
 ('Tom', 'Brady', 'tom.brady@example.com', '555-1234', 0x01, N'NFLFan'),
 ('Aaron', 'Rodgers', 'aaron.rodgers@example.com', '555-9012', 0x01, N'NFLFan'),

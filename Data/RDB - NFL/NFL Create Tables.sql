@@ -14,8 +14,8 @@ if(OBJECT_ID('Team') is not null)
     drop table Team;
 if(OBJECT_ID('Stadium') is not null)
     drop table Stadium;
-if(OBJECT_ID('AppUser') is not null)
-    drop table AppUser;
+if(OBJECT_ID('NFLAppUser') is not null)
+    drop table NFLAppUser;
 if(OBJECT_ID('ConferenceDivision') is not null)
     drop table ConferenceDivision;
 
@@ -59,7 +59,7 @@ from Team
 
 go
 
-CREATE TABLE AppUser (
+CREATE TABLE NFLAppUser (
     AppUserID       INT IDENTITY(1,1) 
         CONSTRAINT PK_AppUser PRIMARY KEY,
     Firstname        NVARCHAR(50)  NOT NULL,
@@ -77,7 +77,7 @@ GO
 CREATE TABLE NFLFan (
     NFLFanID INT CONSTRAINT PK_NFLFan PRIMARY KEY,
     CONSTRAINT FK_NFLFan_AppUser FOREIGN KEY (NFLFanID)
-        REFERENCES AppUser(AppUserID) ON DELETE CASCADE
+        REFERENCES NFLAppUser(AppUserID) ON DELETE CASCADE
 );
 
 GO
@@ -85,7 +85,7 @@ GO
 CREATE TABLE NFLAdmin (
     NFLAdminID INT CONSTRAINT PK_NFLAdmin PRIMARY KEY,
     CONSTRAINT FK_NFLAdmin_AppUser FOREIGN KEY (NFLAdminID)
-        REFERENCES AppUser(AppUserID) ON DELETE CASCADE
+        REFERENCES NFLAppUser(AppUserID) ON DELETE CASCADE
 );
 
 GO
